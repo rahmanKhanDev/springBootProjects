@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.bottom {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bottom1 {
+	margin-right: 20px;
+	text-align: center;
+}
+
+.bottom1 a {
+	text-decoration: none;
+}
+
+.bottom2 {
+	text-align: center;
+	margin-top: 5px;
+}
+
+.bottom2 a {
+	text-decoration: none;
+}
+
+.bg-custom {
+	background: black !important;
+}
+
+.footer {
+	margin: 0 auto;
+}
