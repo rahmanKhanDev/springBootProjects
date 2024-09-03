@@ -21,7 +21,7 @@
 				Page</button></a>
 	</h3>
 	<div class="footer">
-		<p STYLE="text-align:center;margin-top:100px">Devloped by:SONU KHAN</p>
+		<p STYLE="text-align:center;margin-top:100px">Devloped by:Anisur Rahman Khan</p>
 	</div>
 
 </body>
