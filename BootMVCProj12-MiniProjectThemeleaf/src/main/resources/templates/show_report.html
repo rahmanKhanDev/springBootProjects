@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Report</title>
+</head>
+<body style="background-color: cyan">
+
+
+	<div th:if="${!empsList.empty}">
+		<h1 style="text-align: center; color: Red">Employee Report</h1>
+		<table align="center" border="1"
+			style="background-color: #800080; color: white; text-align: center">
+			<tr>
+				<td>Id</td>
+				<td>Name</td>
+				<td>Job</td>
+				<td>Salary</td>
+				<td>Dept No</td>
+				<td>Modify</td>
+			</tr>
+
+			<tr th:each="emp:${empsList}">
+				<td><span th:text="${emp.empno}"></span></td>
+				<td><span th:text="${emp.ename}"></span></td>
+				<td><span th:text="${emp.job}"></span></td>
+				<td><span th:text="${emp.sal}"></span></td>
+				<td><span th:text="${emp.deptno}"></span></td>
+				<td id="modify"><a
+					th:href="@{/employee/edit(empno=${emp.empno})}"><img alt=""
+						th:src="@{/images/edit.webp}" height="25px" width="25px"></a> <a
+					th:href="@{/employee/delete(empno=${emp.empno})}"
+					onclick=" return confirm('Do you want to delete')"><img alt=""
+						th:src="@{/images/delete.png}" height="25px" width="25px"></a></td>
+			</tr>
+
+		</table>
+	</div>
+
+	<div th:if="${empsList.empty}">
+		<h3>Employees not found</h3>
+	</div>
+
+	<!-- footer -->
+	<div class="bottom"
+		style="margin: auto; display: flex; justify-content: center; align-items: center">
+		<div class="bottom1">
+			<div>
+				<a th:href="@{/employee/}"><img alt="Image"
+					th:src="@{/images/home.png}" height="25px" width="35px"
+					style="margin-top: 10px"></a>
+			</div>
+			<div>
+				<a th:href="@{/employee/}" style="color: red; margin-top: 0px">Home</a>
+			</div>
+		</div>
+		<div class="bottom2">
+			<div>
+				<a th:href="@{/employee/add_emp}"><img alt="Image"
+					th:src="@{/images/add.png}" height="23px" width="35px"
+					style="margin-left: 15px; margin-top: 10px"></a>
+			</div>
+			<div>
+				<a th:href="@{/employee/add_emp}"
+					style="color: red; margin-left: 15px; margin-top: 0px">Add</a>
+			</div>
+		</div>
+	</div>
+
+	<h3 style="text-align: center; color: red">
+		<span th:text="${resultMsg}" ></span> 
+	</h3>
+
+</body>
+</html>
