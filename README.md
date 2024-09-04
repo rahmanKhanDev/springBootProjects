@@ -1,1 +1,2 @@
-# this is a repository about spring boot programing
+# This is a spring boot repo
+# It contains all spring boot concept based coding and mini projects
